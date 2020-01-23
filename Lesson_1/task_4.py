@@ -18,3 +18,11 @@ while i != len(number):
 
 print(f'Самое большое чило: {biggest_num}')
 
+#исправленый вариант:
+
+while number:
+    if number % 10 > biggest_num:
+        biggest_num = number % 10
+    number //= 10
+
+print(f'Самое большое число {biggest_num}')
