@@ -27,7 +27,7 @@ inventory_tuple_list = []
 i = 1
 while True:
     inventory_tuple_list.append(
-        (input('Введите номер товара: '), dict({
+        (input('Введите номер товара: ') , dict({
             'название': str(input('Введите название: ')),
             'цена': float(input('Введите цену: ')),
             'количество': int(input('Введите количество: ')),
@@ -50,6 +50,6 @@ for product in inventory_tuple_list:
                 output_dict.get(key).append(value)
         else:
             output_dict.update({key: [value]})
-        list(set(output_dict.get(key)))
+
 
 print(f'собрана аналитика: {output_dict}')

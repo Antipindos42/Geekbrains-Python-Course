@@ -2,30 +2,32 @@
 # Сообщить к какому времени года относится месяц (зима, весна, лето, осень).
 # Напишите решения через list и через dict.
 
-number_of_month = int(input('Введите номер месяца(числа от 1 до 12), чтобы получить его название: '))
+number_of_month = int(input('Введите номер месяца(числа от 1 до 12), чтобы получить сезон: '))
 
-list_of_months = [
-    'Январь',
-    'Февраль',
-    'Март',
-    'Апрель',
-    'Май',
-    'Июнь',
-    'Июль',
-    'Август',
-    'Сентябрь',
-    'Октябрь',
-    'Ноябрь',
-    'Декабрь'
+list_of_seasons = [
+    'Зима',
+    'Весна',
+    'Лето',
+    'Осень'
 ]
 
-print(f'Название с использованием списка: {list_of_months[number_of_month - 1]}')
+dict_of_seasons = {
+    'зима': (12, 1, 2),
+    'весна': (3, 4, 5),
+    'лето': (6, 7, 8),
+    'осень': (9, 10, 11)
+}
 
-dict_of_month = dict()
-i = 1
+while True:
+    if (number_of_month <= 0 or number_of_month > 12):
+        print('Месяцев 12, введите число от 1 до 12')
+        continue
 
-for value in list_of_months:
-    dict_of_month.update({i: value})
-    i += 1
+    print(f'Список: Введенный номер месяца {number_of_month} и это {list_of_seasons[number_of_month // 3 % 4]}')
 
-print(f'Название с использованием словаря: {dict_of_month.get(number_of_month)}')
+    for k, v in dict_of_seasons.items():
+        if number_of_month in v:
+            print(f'Словарь: Введенный номер месяца {number_of_month} и это {k}')
+        break
+
+    break
