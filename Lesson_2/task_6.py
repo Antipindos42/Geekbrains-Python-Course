@@ -27,7 +27,7 @@ inventory_tuple_list = []
 i = 1
 while True:
     inventory_tuple_list.append(
-        (input('Введите номер товара: ') , dict({
+        (input('Введите номер товара: '), dict({
             'название': str(input('Введите название: ')),
             'цена': float(input('Введите цену: ')),
             'количество': int(input('Введите количество: ')),
