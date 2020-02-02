@@ -8,11 +8,11 @@
 
 def division(num, div):
     try:
-        result = num/div
+        return num/div
     except ZeroDivisionError as e:
         print(f'Whoops! division by zero!')
-        return
-    return result
+
+
 
 
 print(division(int(input('Что делим: ')), int(input('На что делим: '))))
