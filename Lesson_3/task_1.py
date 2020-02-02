@@ -4,16 +4,18 @@
  Реализовать функцию, принимающую два числа (позиционные аргументы) и выполняющую их деление.
  Числа запрашивать у пользователя, предусмотреть обработку ситуации деления на ноль.
 """
-def division(number, divider):
-    try:
-        result = number/divider
-    except ValueError as e:
-        print(f'Divided by zero')
-        print(e)
-    return print(result)
-
 
 number = int(input('Что делим: '))
-divider = int(('На что делим: '))
+divider = int(input('На что делим: '))
+
+
+def division(num, div):
+    try:
+        result = num/div
+    except ZeroDivisionError as e:
+        print(f'Whoops! division by zero!')
+        return
+    return result
+
 
 print(division(number, divider))
