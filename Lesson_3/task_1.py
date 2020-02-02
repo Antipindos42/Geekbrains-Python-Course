@@ -1,12 +1,9 @@
-#homework lesson 2: task 1
+#homework lesson 3: task 1
 
 """
  Реализовать функцию, принимающую два числа (позиционные аргументы) и выполняющую их деление.
  Числа запрашивать у пользователя, предусмотреть обработку ситуации деления на ноль.
 """
-
-number = int(input('Что делим: '))
-divider = int(input('На что делим: '))
 
 
 def division(num, div):
@@ -18,4 +15,4 @@ def division(num, div):
     return result
 
 
-print(division(number, divider))
+print(division(int(input('Что делим: ')), int(input('На что делим: '))))
