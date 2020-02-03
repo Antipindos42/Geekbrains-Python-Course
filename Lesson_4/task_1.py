@@ -15,6 +15,7 @@ parser.add_argument('--prize', default=None, type=float)
 
 args = parser.parse_args(argv[1:])
 
+
 def salary(rate: float, hours: float, prize: float):
     return rate * hours + prize
 
