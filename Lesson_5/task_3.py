@@ -27,3 +27,5 @@ for row in lines:
     sum += float(line[1])
 
 print(f'В среднем по больнице вот такой зароботок: {sum} руб')
+
+file.close()

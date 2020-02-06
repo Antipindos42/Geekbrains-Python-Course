@@ -18,3 +18,5 @@ i = 1
 for string in lines:
     print(f'В строке {i} {len(string.split())} слов')
     i+=1
+
+file.close()
