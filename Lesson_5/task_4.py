@@ -15,11 +15,7 @@ import os
 
 DIR = 'files'
 file_to_read_path = os.path.join(DIR, 'task4.txt')
-
-
-
 file_to_write_path = os.path.join(DIR, 'task4-cyr.txt')
-file_write = open(file_to_write_path, 'a', encoding='utf-8')
 
 dictionary = {
     'One': 'Один',
