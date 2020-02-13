@@ -32,6 +32,9 @@ class TrafficLight:
         print(f'Установлен цвет: {self.__color}')
         time.sleep(5)
 
+        while True:
+            self.running()
+
 
 traff_light = TrafficLight()
 print(traff_light.running())
