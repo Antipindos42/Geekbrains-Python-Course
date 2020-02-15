@@ -83,7 +83,6 @@ class Warehouse:
             print(error.message)
 
     #закрепляем по артикулу единицу за соответствующей структурой
-    @staticmethod
     def assign_equipment_to_structure(self, structure: str, equipment_type: str, equipment_sku_number: str):
         try:
             if not self.__office_equipment_collection.get(equipment_type):
@@ -193,3 +192,7 @@ Xerox().add_item(
 )
 
 Warehouse().add_equipment(Xerox.eq_type, Scan.__dict__)
+
+Warehouse().get_full_qty()
+Warehouse().get_assigned_qty()
+Warehouse().get_in_stock_qty()
